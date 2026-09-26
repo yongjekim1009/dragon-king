@@ -1,0 +1,78 @@
+.search-page {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--layout-padding);
+  margin: 0 auto 12rem;
+}
+
+/* 검색 결과 안내 */
+.search-result-info {
+  text-align: center;
+  color: var(--content-sub-color);
+}
+
+.search-result-info strong {
+  color: var(--content-main-color);
+  font-weight: 600;
+}
+
+/* 카테고리 버튼 */
+.category-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+
+  margin: 2rem 0 4rem
+}
+
+/* 검색 결과 Grid */
+.portfolio-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6rem 2rem;
+}
+
+/* 검색 전 */
+.search-empty {
+  padding: 10rem 0;
+  text-align: center;
+  color: var(--content-tertiary-color);
+  font-size: 1.6rem;
+}
+
+/* 결과 없음 */
+.no-result {
+  padding: 12rem 0;
+  text-align: center;
+}
+
+.no-result p {
+  margin-bottom: 0.8rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.no-result span {
+  font-size: 1.5rem;
+  color: var(--content-tertiary-color);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .search-result-info {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+  .category-container {
+    gap: 1.2rem;
+  }
+
+  .portfolio-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+  }
+}

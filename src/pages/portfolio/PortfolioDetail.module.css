@@ -1,0 +1,129 @@
+/* 전체 페이지 컨테이너 */
+.portfolio-detail-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: var(--layout-padding);
+}
+
+.portfolio-detail-wrapper {
+  width: 100%;
+  max-width: 86rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 헤더 영역 */
+.portfolio-detail-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.portfolio-category-badge {
+  display: block;
+  color: var(--content-tertiary-color);
+  margin-bottom: 1.6rem;
+}
+
+.portfolio-detail-title {
+  font-size: var(--detail-title-font-size);
+  margin-bottom: 0.4rem;
+  word-break: keep-all;
+}
+
+.portfolio-detail-desc {
+  font-size: var(--detail-sub-font-size);
+  color: var(--content-sub-color);
+  word-break: keep-all;
+  white-space: pre-line;
+}
+
+.portfolio-detail-desc-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--content-sub-color);
+  word-break: keep-all;
+  white-space: pre-line;
+
+  margin-top: 1.6rem;
+}
+
+/* 이미지 영역 */
+.portfolio-detail-image-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 4rem;
+}
+
+.portfolio-detail-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-mobile-image-area {
+  width: 100%;
+  max-width: 60rem;
+  margin: 2rem auto 0;
+}
+
+.portfolio-mobile-figure {
+  width: 100%;
+}
+
+.portfolio-figure-small {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio-mobile-detail-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 네비게이션 (하단 버튼 영역) */
+.portfolio-detail-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 목록보기 버튼 스타일 */
+.portfolio-back-btn {
+  border: 1px solid var(--content-line-color);
+  border-radius: 50px;
+  padding: 1.6rem 4rem;
+  font-size: 16px;
+  color: var(--content-sub-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portfolio-back-btn:hover {
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  .portfolio-detail-header {
+    margin-bottom: 4rem;
+  }
+
+  .portfolio-category-badge {
+    font-size: 14px;
+    margin-bottom: 0.8rem;
+  }
+
+  .portfolio-detail-title {
+    font-size: 24px;
+  }
+
+  .portfolio-detail-desc {
+    font-size: 14px;
+  }
+}

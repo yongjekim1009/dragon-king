@@ -1,0 +1,24 @@
+.portfolio-section {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--layout-padding);
+  margin: 0 auto;
+}
+
+.portfolio-header-container {
+  text-align: center;
+}
+
+.portfolio-header-container h2 {
+  font-size: var(--section-title-font-size);
+}
+
+@media (max-width: 768px) {
+  .portfolio-header-container {
+    padding: 0 4rem;
+  }
+
+  .portfolio-header-container h1 {
+    font-size: 2.4rem;
+  }
+}

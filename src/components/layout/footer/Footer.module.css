@@ -1,0 +1,45 @@
+.footer-wrapper {
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+}
+
+.footer-container {
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--layout-padding);
+  margin: 4rem auto;
+}
+
+/* 로고 스타일 */
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 1.2rem;
+
+  letter-spacing: 0.25em;
+}
+.logo-strong {
+  font-weight: 600;
+}
+
+/* 정보 텍스트 스타일 */
+.footer-info {
+  font-style: normal;
+}
+
+.footer-info p {
+  font-size: 1.3rem;
+  color: #767676;
+  padding-bottom: 0.8rem;
+}
+
+.footer-info :last-child {
+  padding-bottom: 0;
+}
+
+.footer-divider {
+  margin: 0 0.8rem;
+  color: #dbdbdb;
+  font-weight: 400;
+}

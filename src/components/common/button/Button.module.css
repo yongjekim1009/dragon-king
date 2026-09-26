@@ -1,0 +1,30 @@
+.btn {
+  padding: 1.2rem 2rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  transition: all 0.2s ease;
+}
+
+.btn:not(.active-btn):hover {
+  background-color: var(--btn-hover-bg-color);
+}
+
+.active-btn {
+  border: 1px solid var(--btn-active-line-color);
+  color: var(--btn-active-text-color);
+}
+
+.disabled-btn {
+  border: 1px solid var(--btn-disable-line-color);
+  color: var(--btn-disable-text-color);
+}

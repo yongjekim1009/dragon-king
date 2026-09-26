@@ -1,0 +1,11 @@
+.spacer {
+  height: 16rem;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .spacer {
+    height: 12rem;
+  }
+}

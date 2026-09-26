@@ -1,0 +1,20 @@
+.page-container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--layout-padding);
+  margin: 0 auto;
+}
+
+.header-area {
+  text-align: center;
+}
+
+.page-title {
+  font-size: var(--page-title-font-size);
+  margin-bottom: 0.4rem;
+}
+
+.page-desc {
+  font-size: var(--page-sub-font-size);
+  color: var(--content-sub-color);
+}

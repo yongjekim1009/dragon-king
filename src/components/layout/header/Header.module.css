@@ -1,0 +1,189 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 8rem;
+  margin: 0 auto;
+  padding: var(--layout-padding);
+}
+
+.header-logo h1 {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  line-height: 1;
+}
+
+.header-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-strong {
+  font-weight: 600;
+}
+
+/* --- 데스크톱 메뉴 --- */
+.header-nav {
+  display: block;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.header-menu a {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  transition: color 0.2s;
+}
+
+.header-menu a:hover,
+.header-menu a.active {
+  color: var(--primary-color);
+}
+
+/* --- 모바일 햄버거 버튼 --- */
+.hamburger-btn {
+  display: none; /* 데스크톱에서는 숨김 */
+  background: none;
+  border: 0;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #333;
+}
+
+.icon-stack {
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 2.8rem !important; /* 구글 아이콘 크기 강제 지정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* 햄버거 아이콘 상태 */
+.menu {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+.close {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* 메뉴 열렸을 때 상태 (X 모양) */
+.icon-stack.open .menu {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+.icon-stack.open .close {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* --- 모바일 드롭다운 메뉴 --- */
+.mobile-menu {
+  position: absolute;
+  top: 8rem; /* 헤더 높이만큼 띄움 */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  overflow: hidden;
+
+  /* 애니메이션용 초기값 */
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu.open {
+  max-height: 300px; /* 열렸을 때 메뉴 높이 */
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-link {
+  display: block;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ★ 반응형 미디어 쿼리 (768px 이하) ★ */
+@media screen and (max-width: 768px) {
+  /* PC 메뉴 숨김 */
+  .header-nav {
+    display: none;
+  }
+
+  /* 햄버거 버튼 보임 */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* 헤더 높이 줄임 (선택사항) */
+  .header-container {
+    height: 6rem;
+    padding: var(--layout-padding);
+  }
+
+  .header-logo h1 {
+    font-size: 2rem;
+  }
+
+  /* 모바일 메뉴 시작 위치 재조정 */
+  .mobile-menu {
+    top: 6rem;
+  }
+}
